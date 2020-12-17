@@ -4,15 +4,14 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class YandexTests {
-
-     @Test
+public class YahooTest {
+    @Test
     void selenideSearchTest() {
-        // Открыть Yandex
-        open("https://yandex.ru");
+        // Открыть Yahoo
+        open("https://ru.search.yahoo.com");
 
         // Ввести Selenide в поиск
-        $("#text").setValue("Selenide").pressEnter();
+        $("#yschsp").setValue("Selenide").pressEnter();
 
         // Проверить, что Selenide появился в результатах поиска
         $("html").shouldHave(Condition.text("selenide.org"));
